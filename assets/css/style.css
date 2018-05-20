@@ -1,0 +1,46 @@
+/*font-family: 'Boogaloo', cursive;*/
+
+body {
+	background-color: #afb7ca;
+	background: linear-gradient(to right, #3a3d42, #a6aec1, #afb7ca, #eef2fa, #afb7ca, #a6aec1, #3a3d42);
+}
+
+#gamePage {
+	display: none;
+}
+
+#startButton {
+	width: 200px;
+}
+
+h1 {
+	font-family: 'Shadows Into Light', cursive;
+	text-align: center;
+	font-size: 80px;
+	font-weight: bold;
+	margin-top: 40px;
+}
+
+h2 {
+	font-family: 'Shadows Into Light', cursive;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	color: rgb(226,64,50);
+	margin-top: 40px;
+}
+
+h3 {
+	font-family: 'Boogaloo', cursive;
+	font-size: 40px;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	margin-top: 150px;
+	font-family: 'Boogaloo', cursive;
+}
+
+
+
