@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-	font-family: 'Shadows Into Light', cursive;
+font-family: 'Bungee Inline', cursive;
 	text-align: center;
 	font-size: 80px;
 	font-weight: bold;
@@ -22,7 +22,7 @@ h1 {
 }
 
 h2 {
-	font-family: 'Shadows Into Light', cursive;
+	font-family: 'Bungee Inline', cursive;
 	text-align: center;
 	font-size: 40px;
 	font-weight: bold;
@@ -38,9 +38,14 @@ h3 {
 
 p {
 	text-align: center;
-	margin-top: 150px;
+	margin-top: 90px;
 	font-family: 'Boogaloo', cursive;
 }
 
+.container {
+	margin-top: 70px;
+}
 
+img {
+	border-radius: 15px;
 
