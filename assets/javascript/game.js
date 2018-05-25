@@ -1,3 +1,5 @@
+// start button will clear intro page and show game page
+
 function initialize() {
 	document.getElementById('introPage').style.display = "none" ;
     document.getElementById('gamePage').style.display = "block";
@@ -36,9 +38,6 @@ function resetGame() {
     guessedLetters = [];
     guessingWord = [];
 
-    // Make sure the hangman image is cleared
-    document.getElementById("hangmanImage").src = "";
-
     // Build the guessing word and clear it out
     for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
         guessingWord.push("_");
@@ -67,11 +66,6 @@ function updateDisplay() {
         document.getElementById("pressKeyTryAgain").style.cssText = "display:block";
         hasFinished = true;
     }
-};
-
-// Updates the image depending on how many guesses
-function updateHangmanImage() {
-    document.getElementById("hangmanImage").src = "assets/images/" + (maxTries - remainingGuesses) + ".png";
 };
 
 document.onkeydown = function(event) {
@@ -117,10 +111,9 @@ function evaluateGuess(letter) {
         }
     }
 
-    // if there are no indicies, remove a guess and update the hangman image
+    // if there are no indicies, remove a guess 
     if (positions.length <= 0) {
         remainingGuesses--;
-        updateHangmanImage();
     } else {
         // Loop through all the indicies and replace the '_' with a letter.
         for(var i = 0; i < positions.length; i++) {
