@@ -53,7 +53,7 @@ function resetGame() {
 
 //  Updates the display on the HTML Page
 function updateDisplay() {
-
+    document.getElementById("pressLetter").style.cssText = "display: block";
     document.getElementById("totalWins").innerText = wins;
     document.getElementById("currentWord").innerText = "";
     for (var i = 0; i < guessingWord.length; i++) {
@@ -64,6 +64,7 @@ function updateDisplay() {
     if(remainingGuesses <= 0) {
         document.getElementById("gameover-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText = "display:block";
+        document.getElementById("pressLetter").style.cssText = "display: none";
         hasFinished = true;
     }
 };
@@ -126,6 +127,7 @@ function checkWin() {
     if(guessingWord.indexOf("_") === -1) {
         document.getElementById("youwin-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText= "display: block";
+        document.getElementById("pressLetter").style.cssText = "display: none";
         wins++;
         hasFinished = true;
     }
