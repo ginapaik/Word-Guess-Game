@@ -126,7 +126,7 @@ function evaluateGuess(letter) {
 function checkWin() {
     if(guessingWord.indexOf("_") === -1) {
         document.getElementById("youwin-image").style.cssText = "display: block";
-        document.getElementById("pressKeyTryAgain").style.cssText= "display: block";
+        document.getElementById("pressKeyTryAgain").style.cssText= "display: block; color: #37b646";
         document.getElementById("pressLetter").style.cssText = "display: none";
         wins++;
         hasFinished = true;
