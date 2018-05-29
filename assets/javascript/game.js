@@ -16,15 +16,16 @@ var selectableWords =           // Word list
         "frozen",
     ];
 
-const maxTries = 10;            // Maximum number of tries player has
+const maxTries = 10;            // Maximum number of guesses player has
 
 var guessedLetters = [];        // Stores the letters the user guessed
 var currentWordIndex;           // Index of the current word in the array
 var guessingWord = [];          // This will be the word we actually build to match the current word
-var remainingGuesses = 0;       // How many tries the player has left
+var remainingGuesses = 0;       // How many guesses the player has left
 var gameStarted = false;        // Flag to tell if the game has started
 var hasFinished = false;        // Flag for 'press any key to try again'     
-var wins = 0;                   // How many wins has the player racked up
+var wins = 0;                   // How many wins the player has
+var losses = 0;                 // How many losses the player has
 
 // Reset our game-level variables
 function resetGame() {
@@ -55,6 +56,7 @@ function resetGame() {
 function updateDisplay() {
     document.getElementById("pressLetter").style.cssText = "display: block";
     document.getElementById("totalWins").innerText = wins;
+    document.getElementById("totalLosses").innerText = losses;
     document.getElementById("currentWord").innerText = "";
     for (var i = 0; i < guessingWord.length; i++) {
         document.getElementById("currentWord").innerText += guessingWord[i];
@@ -66,6 +68,7 @@ function updateDisplay() {
         document.getElementById("pressKeyTryAgain").style.cssText = "display:block";
         document.getElementById("pressLetter").style.cssText = "display: none";
         hasFinished = true;
+        losses++;
     }
 };
 
@@ -131,6 +134,7 @@ function checkWin() {
         wins++;
         hasFinished = true;
     }
+
 };
 
 
